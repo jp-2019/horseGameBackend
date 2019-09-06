@@ -22,14 +22,14 @@ $data = json_decode(file_get_contents('php://input'), true);
 $login = $_GET["login"];
 $password = $_GET["password"];
 
-$check = "SELECT * FROM users WHERE login=' $login ' OR password=' $password ' ";
+$check = "SELECT * FROM users WHERE login = '$login' OR password = '$password' ";
 mysqli_select_db($conn, 'horse_game');
 $result = mysqli_query($conn, $check);
 if(mysqli_num_rows($result) > 0){
     echo json_encode(mysqli_fetch_assoc($result));
- /*while ($row = mysqli_fetch_assoc($result)){
+ while ($row = mysqli_fetch_assoc($result)){
     echo "Name: " . $row["login"] . "<br>";
- }*/
+ }
 }
     
 ?>
