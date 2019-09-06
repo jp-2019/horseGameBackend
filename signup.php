@@ -1,8 +1,8 @@
 <?php
 
-// header('Access-Control-Allow-Origin= *');
-// header( 'Access-Control-Allow-Headers= X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization' );
-// header( 'Access-Control-Allow-Methods= GET, POST, OPTIONS, PUT, DELETE' );
+header('Access-Control-Allow-Origin= *');
+header( 'Access-Control-Allow-Headers= X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization' );
+header( 'Access-Control-Allow-Methods= GET, POST, OPTIONS, PUT, DELETE' );
 
 $servername =  localhost ;
 $username =  root ;
@@ -50,7 +50,7 @@ $isFed= $data[isFed];
 // testing for login in first_test login functionality 
 // $sql =  INSERT INTO first_test ( login ) VALUES ( ' $login ' ) ;
 
-$sql = " INSERT INTO users ( email, login, password, terms ) VALUES ( ' $email ', ' $login ', ' $password ', '$terms' )";
+$sql = "INSERT INTO users (email, login, password, terms) VALUES ('$email', '$login', '$password', '$terms')";
 
 mysqli_select_db($conn, 'horse_game');
 $retval = mysqli_query($conn, $sql);
