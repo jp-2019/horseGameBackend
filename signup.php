@@ -58,7 +58,7 @@ $retval = mysqli_query($conn, $sql);
 $userid = $conn->insert_id;
 
 if(!empty($userid)){
-  $sql_horse =  "INSERT INTO horses( breed, color, dayTime, dressage, energy, gallop, gender, health, height, isFed, isInBed, jumping, morale, name, speed, stamina, tr_dressage, tr_gallop, tr_jumping, tr_speed, tr_stamina, tr_trot, trot, userId, weight) VALUES ('$breed','$color','$dayTime','$dressage','$energy','$gallop','$gender','$health','$height','$isFed','$isInBed','$jumping','$morale','$name','$speed','$stamina','$tr_dressage','$tr_gallop','$tr_jumping','$tr_speed','$tr_stamina','$tr_trot','$trot','$userid','$weight')" ;
+  $sql_horse =  "INSERT INTO horses( breed_id, color_id, dayTime, dressage, energy, gallop, gender, health, height, isFed, isInBed, jumping, morale, name, speed, stamina, tr_dressage, tr_gallop, tr_jumping, tr_speed, tr_stamina, tr_trot, trot, userId, weight) VALUES ('$breed','$color','$dayTime','$dressage','$energy','$gallop','$gender','$health','$height','$isFed','$isInBed','$jumping','$morale','$name','$speed','$stamina','$tr_dressage','$tr_gallop','$tr_jumping','$tr_speed','$tr_stamina','$tr_trot','$trot','$userid','$weight')" ;
 
   mysqli_select_db($conn, 'horse_game');
   $retval = mysqli_query($conn, $sql_horse);
